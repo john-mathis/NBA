@@ -1,0 +1,52 @@
+.teams-container {
+    /* margin: auto; */
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 1rem 4rem;
+    background-color: var(--dark-grey);
+    width: 100%;
+}
+
+.light .teams-container {
+    background-color: var(--white);
+}
+
+@media only screen and (min-width:650px) {
+    .teams-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width:900px) {
+    .teams-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width:1400px) {
+    .teams-container {
+        grid-template-columns: repeat(5, 1fr);
+        /* max-width: 100rem; */
+    }
+}
+
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 8rem;
+}
+
+.team-name {
+    text-align: center;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.team-logo {
+    width: 9rem;
+    height: 9rem;
+}

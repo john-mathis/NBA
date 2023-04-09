@@ -1,0 +1,33 @@
+.matchup-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+}
+
+@media only screen and (min-width:700px) {
+    .matchup-container {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 60rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .matchup-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        max-width: 65rem;
+    }
+}
+
+
+.game-container {
+    width: 17rem;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.game-date {
+    margin: 1rem 0;
+}

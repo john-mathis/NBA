@@ -1,0 +1,142 @@
+.login-container {
+    max-width: 20rem;
+    min-height: 22rem;
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 12rem auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+}
+
+.light .login-container {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+
+@media screen and (max-width:374px) {
+    .login-container {
+        max-width: 15rem;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    .login-container {
+        min-height: 28rem;
+        max-width: 30rem;
+    }
+}
+
+.login-text {
+    margin: .2rem 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 1rem 0;
+    margin-top: 1.5rem;
+    height: 15rem;
+}
+
+.login-input {
+    background-color: var(--dark-grey);
+    margin: .5rem 0;
+    border: 1px solid var(--white);
+    border-radius: 5px;
+}
+
+.light .login-input {
+    background-color: var(--white);
+}
+
+.error-message {
+    color: var(--red);
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    min-width: 100%;
+    min-height: 2.313rem;
+    color: var(--white);
+    text-indent: 1rem;
+    caret-color: var(--red);
+}
+
+.light input[type="text"],
+input[type="password"] {
+    color: var(--black);
+    caret-color: var(--red);
+}
+
+
+@media screen and (max-width:374px) {
+
+    input[type="text"],
+    input[type="password"] {
+        max-width: 12.438rem;
+    }
+}
+
+input[type="text"],
+input[type="password"]::placeholder {
+    font-size: 0.938rem;
+    text-indent: 1rem;
+}
+
+
+.show-password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 9.5rem;
+}
+
+
+input[type="checkbox"] {
+    min-width: 1.15rem;
+    min-height: 1.15rem;
+}
+
+.cta-heading {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.cta-heading span {
+    color: var(--red);
+    text-decoration: none;
+    margin-left: .2rem;
+}
+
+.cta-btn {
+    background-color: var(--red);
+    border: none;
+    min-height: 2rem;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    align-items: center;
+}
+
+.form-container .cta-btn {
+    margin-top: .5rem;
+}
+
+
+
+.cta-btn:hover {
+    background-color: var(--light-grey);
+    color: var(--blue);
+}
+
+.light .cta-btn:hover {
+    background-color: var(--icon-hover);
+    color: var(--blue);
+}

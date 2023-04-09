@@ -1,0 +1,48 @@
+.recent-game-stats-container {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 4rem;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+}
+
+@media only screen and (min-width:425px) {
+    .chart-container {
+        height: 14rem;
+    }
+}
+
+
+@media only screen and (min-width:550px) {
+    .chart-container {
+        height: 17rem;
+    }
+}
+
+
+@media only screen and (min-width:768px) {
+    .chart-container {
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .chart-container {
+        height: 30rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .chart-container {
+        height: 35rem;
+    }
+}
+
+.final-score-container {
+    margin: auto;
+    padding: 2rem 0;
+}

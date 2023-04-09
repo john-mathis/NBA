@@ -1,0 +1,166 @@
+.table-container {
+    margin: auto;
+    width: 100%;
+}
+
+
+
+.team-data {
+    vertical-align: baseline;
+    margin: 0 1rem;
+}
+
+.standings-table {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    margin: 1rem auto;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+@media only screen and (min-width:1050px) {
+    .standings-table {
+        width: fit-content;
+    }
+}
+
+.light .standings-table {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+table {
+    border-spacing: 5rem 0;
+    border-collapse: collapse;
+    overflow-x: scroll;
+    display: block;
+    white-space: nowrap;
+    table-layout: fixed;
+    /* margin: auto; */
+}
+
+@media only screen and (min-width:1030px) {
+    table::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+table>*>tr>th:first-child,
+table>*>tr>td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background-color: var(--dark-grey);
+    border-right: 1px solid var(--black);
+    width: 20rem;
+}
+
+@media only screen and (max-width:768px) {
+
+    table>*>tr>th:first-child,
+    table>*>tr>td:first-child {
+        width: 14rem;
+    }
+}
+
+
+.light table>*>tr>th:first-child,
+.light table>*>tr>td:first-child {
+    background-color: var(--white)
+}
+
+.team-info {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+
+
+.standings-table>*>tr:nth-child(6) {
+    border-bottom: 2px dashed gray;
+}
+
+.standings-table>*>tr:nth-child(21) {
+    border-bottom: 2px dashed gray
+}
+
+.standings-table>*>tr:nth-child(10) {
+    border-bottom: 2px solid gray
+}
+
+.standings-table>*>tr:nth-child(25) {
+    border-bottom: 2px solid gray
+}
+
+.standings-table .table-head th {
+    padding: 1.5rem;
+    border-top: 1px solid var(--white);
+}
+
+.light .standings-table .table-head th {
+    border-top: 1px solid var(--black);
+}
+
+tr {
+    border-bottom: 1px solid var(--black);
+    z-index: 1;
+}
+
+.light tr {
+    border-bottom: 1px solid var(--black);
+}
+
+.team-info {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--white);
+}
+
+.light .team-info {
+    color: var(--black);
+}
+
+
+.team-data td {
+    text-align: center;
+    padding: .5rem;
+    z-index: 1;
+}
+
+.team-data td:nth-child(15) {
+    padding-bottom: 2rem;
+}
+
+.team-img {
+    margin: 0 1.5rem;
+}
+
+
+.team-data img {
+    width: 2rem;
+    max-height: 2rem;
+}
+
+@media only screen and (max-width:768px) {
+    .team-name-short {
+        display: block;
+    }
+
+    .team-name-long {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .team-name-short {
+        display: none;
+    }
+
+    .team-name-long {
+        display: block;
+    }
+}

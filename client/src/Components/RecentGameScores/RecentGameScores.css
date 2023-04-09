@@ -1,0 +1,116 @@
+.header {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.games-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid var(--white);
+    padding: .6rem .5rem;
+    margin: 0 .2rem;
+    height: 5rem;
+    min-width: 8rem;
+    cursor: pointer;
+}
+
+.games-container:hover {
+    background-color: var(--icon-hover);
+}
+
+.light .games-container {
+    border: 2px solid var(--black);
+}
+
+.current-games-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    max-width: fit-content;
+    overflow-x: auto;
+    overflow-y: auto;
+    height: 6rem;
+    margin: 1rem auto 0;
+    padding: 0 .5rem;
+}
+
+.current-games-container a {
+    text-decoration: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+.live-logo {
+    position: absolute;
+    color: red;
+    top: 0;
+    right: 0;
+    font-size: .7rem;
+
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-team-logo {
+    width: 1.5rem;
+    max-height: 1.5rem;
+    margin-right: .5rem;
+}
+
+.small-team-detail {
+    color: var(--white);
+}
+
+.light .small-team-detail {
+    color: var(--black);
+}
+
+.small-team-code {
+    width: 2.5rem;
+    color: var(--white);
+}
+
+.light .small-team-code {
+    color: var(--black);
+}
+
+.game-result {
+    margin-left: .4rem;
+    color: var(--white);
+}
+
+.light .game-result {
+    color: var(--black);
+}
+
+.games-container p {
+    text-align: left;
+}

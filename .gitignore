@@ -1,0 +1,4 @@
+node_modules
+#MISC
+.env.development
+

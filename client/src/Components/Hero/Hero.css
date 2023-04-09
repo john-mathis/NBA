@@ -1,0 +1,130 @@
+.hero-wrapper {
+    background-color: var(--black);
+    max-width: 100%;
+}
+
+
+.light .hero-wrapper {
+    background-color: var(--light-grey);
+}
+
+.hero-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+    margin: auto;
+    padding: 2rem 3rem;
+    min-height: 40rem;
+}
+
+@media screen and (min-width:1024px) {
+    .hero-container {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero-container {
+        max-width: 80rem;
+        height: 60vh;
+    }
+}
+
+.hero-header {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+}
+
+
+@media screen and (max-width:425px) {
+    .hero-header {
+        font-size: 2rem;
+    }
+}
+
+.hero-text-container {
+    margin: auto;
+}
+
+@media screen and (min-width:1200px) {
+    .hero-container {
+        min-height: 30rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .hero-text-container {
+        max-width: 30rem;
+    }
+}
+
+.hero-heading {
+    line-height: 1.5;
+    max-width: 35rem;
+
+}
+
+.hero-btn-container {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:425px) {
+    .hero-btn {
+        margin: .5rem 0;
+    }
+}
+
+@media screen and (min-width:425px) {
+    .hero-btn-container {
+        flex-direction: row;
+    }
+}
+
+.hero-btn {
+    background-color: var(--red);
+    color: white;
+    padding: .75rem.5rem;
+    border-radius: 5px;
+    margin-right: 1rem;
+    text-decoration: none;
+    width: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-btn:hover {
+    background-color: var(--light-grey);
+}
+
+.hero-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:1200px) {
+    .hero-img-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .hero-img {
+        max-width: 100%;
+    }
+}
+
+.hero-img {
+    /* max-width: 25rem; */
+    height: 15rem;
+}
+
+@media screen and (min-width:1024px) {
+    .hero-img {
+        max-width: 25rem;
+    }
+}

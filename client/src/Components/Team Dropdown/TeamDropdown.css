@@ -1,0 +1,12 @@
+select {
+    min-height: 2rem;
+    background-color: var(--light-grey);
+    color: var(--black);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.light select {
+    background-color: var(--light-grey);
+    color: var(--black);
+}

@@ -1,0 +1,43 @@
+.player-container {
+    width: 100%;
+    padding: 2rem 1rem 5rem;
+}
+
+
+@media only screen and (min-width:1300px) {
+    .player-container {
+        max-width: fit-content;
+        margin: auto;
+    }
+}
+
+/* Media query to make table centered */
+
+.players-link {
+    color: var(--white);
+}
+
+.player-container table {
+    /* border-collapse: collapse; */
+    overflow-x: auto;
+    width: 100%;
+    border-spacing: 1.5rem 0;
+}
+
+
+.player-card td:first-child {
+    text-align: left;
+}
+
+.player-card td {
+    text-align: center;
+}
+
+.player-container th {
+    text-align: left;
+    padding: 1.5rem;
+}
+
+.player-container tr {
+    padding: 1.5rem;
+}
