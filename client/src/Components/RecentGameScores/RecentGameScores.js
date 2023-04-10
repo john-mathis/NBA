@@ -15,7 +15,7 @@ const RecentGameScores = () => {
   const yyyy = today.getFullYear();
   today = yyyy + "-" + mm + "-" + dd;
 
-  const { data } = useGetRecentGameScoresQuery(today);
+  const { data } = useGetRecentGameScoresQuery("2023-04-09");
 
   useEffect(() => {
     setGames(data?.response);
