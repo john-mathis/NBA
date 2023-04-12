@@ -8,13 +8,15 @@ const Players = () => {
 
   const { playerID, currentPlayerName } = useContext(Context);
 
-  const { data, error, isLoading } = useGetPlayerDetailsQuery(playerID);
+  // Calls the API endpoint with the specific player ID
+  const { data } = useGetPlayerDetailsQuery(playerID);
 
+  // Setting player stats to be the response of the API call
   useEffect(() => {
     setPlayerStats(data?.response);
-    console.log(data);
   }, [data]);
 
+  // Filter the last ten games that the specified player has played.
   const filterLastTenGameStats = playerStats?.slice(
     playerStats.length - 10,
     playerStats.length

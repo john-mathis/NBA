@@ -16,8 +16,11 @@ const RecentGamesStats = () => {
     const fetchData = async () => {
       try {
         const graphData = await data;
+        // Assigns the API response to the latest game stats hook
         setLatestGameStats(graphData.response);
+        // Assigns the first team's score to the team one score hook
         setTeamOneScore(graphData.response[0].statistics[0].points);
+        // Assigns the second team's score to the team two score hook
         setTeamTwoScore(graphData.response[1].statistics[0].points);
       } catch {}
     };
@@ -25,6 +28,7 @@ const RecentGamesStats = () => {
   }, [data]);
 
   const chartData = {
+    // Creates the labels for the bar chart
     labels: [
       "Points",
       "Assists",
@@ -37,6 +41,7 @@ const RecentGamesStats = () => {
       "FT%",
     ],
     datasets: [
+      // Assigns a statistic to each label
       {
         label: latestGameStats[0]?.team.name,
         data: [

@@ -25,7 +25,7 @@ const RecentGameScores = () => {
     <>
       <section className="current-games-wrapper">
         <section className="current-games-container">
-          {games.map((info) => {
+          {games?.map((info) => {
             return (
               <React.Fragment key={info.id}>
                 <Link to="/recent-game-stats">
