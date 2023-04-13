@@ -39,14 +39,22 @@ const Navbar = () => {
     document.documentElement.classList.remove("light");
     document.documentElement.classList.add("dark");
     document.body.style.backgroundColor = " var(--dark-grey)";
-    // sessionStorage.setItem("mode", "dark");
+    sessionStorage.setItem("mode", "dark");
   };
 
   const handleLightMode = () => {
     document.documentElement.classList.remove("dark");
     document.documentElement.classList.add("light");
     document.body.style.backgroundColor = " var(--white)";
+    sessionStorage.setItem("mode", "light");
   };
+
+  if (sessionStorage.getItem("mode") === "dark") {
+    handleDarkMode();
+  } else {
+    handleLightMode();
+  }
+
   return (
     <nav>
       <div className="nav-container">

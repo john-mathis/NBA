@@ -10,12 +10,6 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-info-container">
           <p className="text-xl footer-link bold">NBA STATS</p>
-          <p className="footer-text">Stats in one place.</p>
-          <Link to="github.com/john-mathis">
-            <AiFillGithub className="footer-icon" />
-          </Link>
-          <Link to=""> </Link>
-          <BiExport className="footer-icon" />
         </div>
 
         <div className="footer-links-container">
@@ -61,12 +55,33 @@ const Footer = () => {
             >
               Prime Barbershop
             </a>
-            <p className="text-body footer-link">Project 2</p>
+            <a
+              href="https://john-mathis.github.io/react-planets/"
+              className="text-body footer-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Planets
+            </a>
           </div>
           <div className="footer-info-container">
-            <p className="text-L uppercase">Projects</p>
-            <p className="text-body footer-link">Project 1</p>
-            <p className="text-body footer-link">Project 2</p>
+            <p className="text-L uppercase">Tools</p>
+            <a
+              href="https://www.mongodb.com/mern-stack"
+              className="text-body footer-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MERN
+            </a>
+            <a
+              href="https://redux-toolkit.js.org/rtk-query/overview"
+              className="text-body footer-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              RTK Query
+            </a>
           </div>
         </div>
       </div>
