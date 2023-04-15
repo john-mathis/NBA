@@ -21,8 +21,6 @@ const TeamDetails = () => {
     (players) => players.birth.date !== null && players.height.feets !== null
   );
 
-  console.log(filterTwoWayPlayers);
-
   const sortByNumber = filterTwoWayPlayers?.sort(
     (a, b) => a.leagues.standard?.jersey - b.leagues.standard?.jersey
   );
