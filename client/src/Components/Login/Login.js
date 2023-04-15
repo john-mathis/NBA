@@ -17,6 +17,7 @@ const Login = () => {
         username,
         password,
       });
+
       console.log(response);
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
@@ -43,7 +44,6 @@ const Login = () => {
         </h1>
         <p className="center-align bold login-text">Welcome back!</p>
         <p className="center-align login-text">Login to your account.</p>
-        {/* <p className="error-message center-align">{errorMessage}</p> */}
         <form onSubmit={handleSubmit} className="form-container">
           <input
             onChange={(e) => {

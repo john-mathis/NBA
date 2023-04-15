@@ -22,28 +22,28 @@ const Teams = () => {
     return <Loading />;
   }
 
-  const displayTeams = nbaTeams?.map((info) => {
-    return (
-      <React.Fragment key={info.id}>
-        <Link to="/teamdetails" className="">
-          <div
-            className="team-card"
-            onClick={() => {
-              setTeam(info.id);
-            }}
-          >
-            <img className="team-logo" src={info.logo} alt="team logo" />
-            <p className="team-name nav-link">{info.name}</p>
-          </div>
-        </Link>
-      </React.Fragment>
-    );
-  });
-
   return (
     <>
       <h1 className="uppercase center-align page-header">teams</h1>
-      <div className="teams-container">{displayTeams}</div>
+      <div className="teams-container">
+        {nbaTeams?.map((info) => {
+          return (
+            <React.Fragment key={info.id}>
+              <Link to="/teamdetails" className="">
+                <div
+                  className="team-card"
+                  onClick={() => {
+                    setTeam(info.id);
+                  }}
+                >
+                  <img className="team-logo" src={info.logo} alt="team logo" />
+                  <p className="team-name nav-link">{info.name}</p>
+                </div>
+              </Link>
+            </React.Fragment>
+          );
+        })}
+      </div>
     </>
   );
 };

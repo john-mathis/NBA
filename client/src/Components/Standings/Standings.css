@@ -3,8 +3,6 @@
     width: 100%;
 }
 
-
-
 .team-data {
     vertical-align: baseline;
     margin: 0 1rem;
@@ -71,10 +69,11 @@ table>*>tr>td:first-child {
     background-color: var(--white)
 }
 
-.team-info {
+
+.standings-table>tbody>tr>td:first-child {
     position: sticky;
     left: 0;
-    z-index: 2;
+
 }
 
 

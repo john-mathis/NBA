@@ -9,16 +9,21 @@ const router = express.Router();
 router.post("/signup", async (req, res) => {
   // Storing username name and password.
   const { username, password } = req.body;
+
   //   Searching to see if the user already exists.
   const user = await userModel.findOne({ username });
   //   If the username exists, return a message saying the username already exists.
   if (user) {
-    return res.json({ message: "User already exists!" });
+    return res.status(400).json({ message: "User already exists!" });
   }
+
   //   If the username is not taken, hash the user's password.
   const hashedPassword = await bcrypt.hash(password, 10);
   //   Create a new user with the collected username and password.
-  const newUser = new userModel({ username, password: hashedPassword });
+  const newUser = new userModel({
+    username,
+    password: hashedPassword,
+  });
   //   Save the new user's credentials.
   await newUser.save();
   //   If the process completes, return a message saying the regristration was complete.
@@ -33,14 +38,14 @@ router.post("/login", async (req, res) => {
   const user = await userModel.findOne({ username });
   // If the username does not exist, return a message saying the username does not exist.
   if (!user) {
-    return res.json({ message: "Username does not exist" });
+    return res.status(400).json({ message: "Username does not exist" });
   }
   // If the username exists, compare the password to the stored password.
   const isPasswordaValid = await bcrypt.compare(password, user.password);
 
   //   If the password is incorrect, return a message saying the username or password is incorrect.
   if (!isPasswordaValid) {
-    return res.json({ message: "Username or password is incorrect" });
+    return res.status(400).json({ message: "Invalid login credentials" });
   }
 
   //   If the password is correct, create a JWT token.

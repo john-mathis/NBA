@@ -2,20 +2,20 @@ export const SliderData = [
   {
     id: 0,
     header: "GET REAL GRIZZ",
-    description:
-      "Ja Morant and the Mepmphis Grizzlies continue to shock the basketball world.",
+    description: "Grizzlies exceed expectations with standout performances.",
     image: "../../assets/grizzlies-duo.jpg",
   },
   {
     id: 1,
     header: "BALANCE IN BOSTON ",
-    description: "Boston's young core is fully focused and functional.",
+    description: "Celtics dominate regular season with impressive consistency.",
     image: "../../assets/celtics-duo.jpg",
   },
   {
     id: 2,
     header: "NUMBER ONE NUGGETS ",
-    description: "'Denver looks questionable entering the post season.",
+    description:
+      "Nuggets claim top spot in the West with dominant season performance.",
     image: "../../assets/nuggets-duo.jpg",
   },
   {
@@ -28,7 +28,8 @@ export const SliderData = [
   {
     id: 4,
     header: "LIGHT ARMED LAKERS",
-    description: "Los Angeles Lakers have clenched the 7th seed.",
+    description:
+      "The Lakers clinch a playoff spot with dominant end-of-season performance.",
     image: "../../assets/lakers.jpg",
   },
 ];

@@ -10,10 +10,13 @@ app.use(cors());
 app.use("/auth", userRouter);
 
 //   CREATE ENVIORMENT VARIABLE FOR PASSWORD
-mongoose.connect(`${process.env.REACT_APP_MONGO_KEY}`, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://mack:mackmerntheman@nbas.j6sa02x.mongodb.net/test",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 app.listen(3001, () => {
   console.log("Server started");

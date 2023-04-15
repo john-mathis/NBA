@@ -30,6 +30,7 @@ const App = () => {
   const [versusTeamIDs, setVersusTeamIDs] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [cookies, setCookies] = useState("");
 
   return (
     <Context.Provider
@@ -56,6 +57,8 @@ const App = () => {
         setError,
         loading,
         setLoading,
+        cookies,
+        setCookies,
       }}
     >
       <Navbar />
