@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { HiMoon } from "react-icons/hi";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
+import { BiUserCircle } from "react-icons/bi";
 import { useCookies } from "react-cookie";
 
 const Navbar = () => {
@@ -90,6 +91,16 @@ const Navbar = () => {
         </div>
 
         <div className="nav-icons-container">
+          {cookies.access_token ? (
+            <Link to="/dashboard">
+              <div className="dashboard-container">
+                <BiUserCircle className=" dashboard-icon nav-icon" />
+                <p>Dashboard</p>
+              </div>
+            </Link>
+          ) : (
+            ""
+          )}
           <div className="theme-icons-container">
             <HiMoon onClick={handleDarkMode} className="nav-icon dark-mode" />
             <BsFillSunFill

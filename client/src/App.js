@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Home from "./Components/Home/Home";
+import Dashboard from "./Components/Dashboard/Dashboard";
 import Standings from "./Components/Standings/Standings";
 import { Routes, Route } from "react-router-dom";
 import Requests from "./Components/Requests/Requests";
@@ -74,6 +75,7 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
     </Context.Provider>

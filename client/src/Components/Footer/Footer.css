@@ -30,10 +30,6 @@
 footer {
     background-color: var(--black);
     padding: 2rem 2rem;
-    /* position: absolute; */
-    bottom: 0rem;
-    right: 0;
-    left: 0;
 }
 
 

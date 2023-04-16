@@ -25,6 +25,7 @@ const Teams = () => {
   return (
     <>
       <h1 className="uppercase center-align page-header">teams</h1>
+
       <div className="teams-container">
         {nbaTeams?.map((info) => {
           return (

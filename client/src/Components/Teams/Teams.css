@@ -1,3 +1,7 @@
+#teams {
+    height: fit-content;
+}
+
 .teams-container {
     display: grid;
     gap: 2rem;

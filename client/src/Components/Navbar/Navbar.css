@@ -93,7 +93,6 @@ nav {
 .nav-icons-container {
     display: flex;
     justify-content: space-between;
-    width: 5rem;
 }
 
 
@@ -108,6 +107,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* width: 30rem; */
 }
 
 .nav-cta {
@@ -147,11 +147,24 @@ nav {
     height: 2rem;
     width: 1.75rem;
     cursor: pointer;
+    margin-right: .3rem;
 }
 
 .nav-icon:hover {
     color: var(--icon-hover);
 }
+
+.dashboard-container {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-container:hover {
+    color: var(--icon-hover);
+    cursor: pointer;
+}
+
 
 /* Utility classes */
 @media only screen and (max-width:767px) {
