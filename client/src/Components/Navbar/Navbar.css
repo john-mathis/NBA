@@ -106,8 +106,8 @@ nav {
 .theme-icons-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    /* width: 30rem; */
 }
 
 .nav-cta {
@@ -154,13 +154,44 @@ nav {
     color: var(--icon-hover);
 }
 
-.dashboard-container {
-    margin-right: 1rem;
+.light .dashboard {
+    color: var(--black);
+}
+
+.dashboard {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.desktop-dashboard {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .desktop-dashboard {
+        display: block;
+    }
+
+    .mobile-dashboard {
+        display: none;
+    }
+}
+
+.nav-dashboard-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
-.dashboard-container:hover {
+@media screen and (min-width:768px) {
+    .nav-dashboard-container {
+        margin-right: 1rem;
+    }
+}
+
+
+
+.nav-dashboard-container:hover {
     color: var(--icon-hover);
     cursor: pointer;
 }

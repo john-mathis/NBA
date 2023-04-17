@@ -1,3 +1,18 @@
 #dashboard {
     height: 80vh;
 }
+
+.light .dashboard-container {
+    background-color: var(--light-grey);
+    color: var(--black);
+}
+
+.dashboard-container {
+    border-radius: 5px;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+}

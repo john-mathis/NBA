@@ -11,7 +11,7 @@ app.use("/auth", userRouter);
 
 //   CREATE ENVIORMENT VARIABLE FOR PASSWORD
 mongoose.connect(
-  "mongodb+srv://mack:mackmerntheman@nbas.j6sa02x.mongodb.net/test",
+  `mongodb+srv://mack:mackmerntheman@nbas.j6sa02x.mongodb.net/test`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,

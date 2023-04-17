@@ -76,6 +76,17 @@ const Navbar = () => {
           </a>
 
           {cookies.access_token ? (
+            <Link to="/dashboard" className="mobile-dashboard dashboard">
+              <div className="nav-dashboard-container">
+                <BiUserCircle className=" dashboard-icon nav-icon" />
+                <p>Dashboard</p>
+              </div>
+            </Link>
+          ) : (
+            ""
+          )}
+
+          {cookies.access_token ? (
             <a
               href="/login"
               className="cta-btn center-align nav-cta"
@@ -92,8 +103,8 @@ const Navbar = () => {
 
         <div className="nav-icons-container">
           {cookies.access_token ? (
-            <Link to="/dashboard">
-              <div className="dashboard-container">
+            <Link to="/dashboard" className="desktop-dashboard dashboard">
+              <div className="nav-dashboard-container">
                 <BiUserCircle className=" dashboard-icon nav-icon" />
                 <p>Dashboard</p>
               </div>
