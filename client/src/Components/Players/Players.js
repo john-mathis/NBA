@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../Context/Context";
 import { useGetPlayerDetailsQuery } from "../../App/Features/Api/apiSlice";
 import PlayerStatsTable from "../PlayerStatsTable/PlayerStatsTable";
+import "../Players/Players.css";
 
 const Players = () => {
   const [playerStats, setPlayerStats] = useState([]);
@@ -49,12 +50,12 @@ const Players = () => {
   });
 
   return (
-    <>
+    <section id="players">
       <h1 className="center-align page-header">
         {currentPlayerName} LAST 10 GAMES
       </h1>
       <PlayerStatsTable playerStats={displayPlayerStats} />
-    </>
+    </section>
   );
 };
 

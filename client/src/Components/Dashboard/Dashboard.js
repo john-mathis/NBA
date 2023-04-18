@@ -11,12 +11,12 @@ const Dashboard = () => {
         <p>Adjust your preferred settings here.</p>
 
         <ul>
-          <li>
-            <AiOutlineSetting />
+          <li className="dashboard-list-item">
+            <AiOutlineSetting className="dashboard-icon" />
             General
           </li>
-          <li>
-            <MdAccountCircle />
+          <li className="dashboard-list-item">
+            <MdAccountCircle className="dashboard-icon" />
             Account
           </li>
           <li></li>

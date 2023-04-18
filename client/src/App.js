@@ -32,6 +32,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [cookies, setCookies] = useState("");
+  const [signedIn, setSignedIn] = useState(false);
 
   return (
     <Context.Provider
@@ -60,22 +61,27 @@ const App = () => {
         setLoading,
         cookies,
         setCookies,
+        signedIn,
+        setSignedIn,
       }}
     >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teams" element={<Teams />} />
-        <Route path="/teamdetails" element={<TeamDetails />} />
+        <Route path="/teamdetails/:teamId" element={<TeamDetails />} />
         <Route path="/standings" element={<Standings />} />
         <Route path="/recent-game-stats" element={<RecentGamesStats />} />
-        <Route path="/players" element={<Players />} />
+        <Route path="/players/:playerId" element={<Players />} />
         <Route path="/head-to-head" element={<HeadToHead />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/sponsors" element={<Sponsors />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={signedIn ? <Dashboard /> : <Login />}
+        />
       </Routes>
       <Footer />
     </Context.Provider>

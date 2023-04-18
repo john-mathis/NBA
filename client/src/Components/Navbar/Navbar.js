@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Navbar/Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,8 +7,10 @@ import { BsFillSunFill } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import { BiUserCircle } from "react-icons/bi";
 import { useCookies } from "react-cookie";
+import { Context } from "../Context/Context";
 
 const Navbar = () => {
+  const { signedIn, setSignedIn } = useContext(Context);
   const [openMenuClass, setOpenMenuClass] = useState("nav-icon show");
   const [closeMenuClass, setCloseMenuClass] = useState("nav-icon hide");
   const [navLinksClass, setNavLinksClass] = useState(
@@ -21,6 +23,7 @@ const Navbar = () => {
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
+    setSignedIn(false);
     navigate("/login");
   };
 

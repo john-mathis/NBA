@@ -20,6 +20,7 @@ const SignUp = () => {
       console.log(emailAddress);
     } catch (err) {
       console.error(err);
+      setErrorMessage(err.response.data.message);
     }
   };
 
@@ -29,6 +30,9 @@ const SignUp = () => {
         <h1 className="uppercase bold center-align login-text">nba stats</h1>
         <p className="center-align bold  login-text">Welcome back!</p>
         <p className="center-align login-text">Create an account.</p>
+        <p className="center-align error-message">
+          {errorMessage ? errorMessage : ""}
+        </p>
         <form action="POST" className="form-container" onSubmit={handleSubmit}>
           <input
             onChange={(e) => {

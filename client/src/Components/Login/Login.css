@@ -58,6 +58,7 @@
 .error-message {
     color: var(--red);
     margin-top: 1rem;
+    font-weight: 700;
 }
 
 input[type="text"],

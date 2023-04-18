@@ -30,7 +30,7 @@ const Teams = () => {
         {nbaTeams?.map((info) => {
           return (
             <React.Fragment key={info.id}>
-              <Link to="/teamdetails" className="">
+              <Link to={`/teamdetails/${info.nickname}`} className="">
                 <div
                   className="team-card"
                   onClick={() => {

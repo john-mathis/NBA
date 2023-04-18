@@ -37,7 +37,7 @@ const TeamDetails = () => {
         <tr className="player-card">
           <td>
             <Link
-              to="/players"
+              to={`/players/${info.id}`}
               className="players-link"
               onClick={() => {
                 setPlayerID(info.id);
