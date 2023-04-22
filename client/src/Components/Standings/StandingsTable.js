@@ -32,7 +32,7 @@ const StandingsTableBody = ({ props }) => {
               <td className="team-info">
                 {props?.conference.rank}
                 <Link
-                  to="/teamdetails"
+                  to={`/teamdetails/${props.team.nickname}`}
                   onClick={() => {
                     setTeam(props.team.id);
                   }}

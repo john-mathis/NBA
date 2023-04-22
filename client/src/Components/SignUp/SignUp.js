@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [emailAddress, setEmailAddress] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -17,10 +16,8 @@ const SignUp = () => {
         password,
       });
       console.log(response);
-      console.log(emailAddress);
     } catch (err) {
-      console.error(err);
-      setErrorMessage(err.response.data.message);
+      console.log(err);
     }
   };
 

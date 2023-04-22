@@ -11,12 +11,11 @@ router.post("/signup", async (req, res) => {
   const { username, password } = req.body;
 
   //   Searching to see if the user already exists.
-  const user = await userModel.findOne({ username });
+  const existingUser = await userModel.findOne({ username });
   //   If the username exists, return a message saying the username already exists.
-  if (user) {
+  if (existingUser) {
     return res.status(400).json({ message: "User already exists!" });
   }
-
   //   If the username is not taken, hash the user's password.
   const hashedPassword = await bcrypt.hash(password, 10);
   //   Create a new user with the collected username and password.
@@ -27,7 +26,7 @@ router.post("/signup", async (req, res) => {
   //   Save the new user's credentials.
   await newUser.save();
   //   If the process completes, return a message saying the regristration was complete.
-  res.json({ message: "User successfully registered" });
+  res.status(201).json({ message: "User successfully registered" });
 });
 
 // Sending a POST request to sign a user in.
