@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [userMessage, setUserMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,6 +16,9 @@ const SignUp = () => {
         password,
       });
       console.log(response);
+      setUserMessage(response.data.message);
+      setUsername("");
+      setPassword("");
     } catch (err) {
       console.log(err);
     }
@@ -28,7 +31,7 @@ const SignUp = () => {
         <p className="center-align bold  login-text">Welcome back!</p>
         <p className="center-align login-text">Create an account.</p>
         <p className="center-align error-message">
-          {errorMessage ? errorMessage : ""}
+          {userMessage ? userMessage : ""}
         </p>
         <form action="POST" className="form-container" onSubmit={handleSubmit}>
           <input

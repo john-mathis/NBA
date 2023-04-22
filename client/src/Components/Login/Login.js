@@ -9,7 +9,7 @@ const Login = () => {
   const { signedIn, setSignedIn } = useContext(Context);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [userMessage, setUserMessage] = useState("");
   const [_, setCookies] = useCookies(["access_token"]);
   const navigate = useNavigate();
 
@@ -20,14 +20,13 @@ const Login = () => {
         username,
         password,
       });
-
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
       navigate("/");
       setSignedIn(true);
     } catch (err) {
       console.error(err);
-      setErrorMessage(err.response.data.message);
+      setUserMessage(err.response.data.message);
     }
   };
 
@@ -49,7 +48,7 @@ const Login = () => {
         <p className="center-align bold login-text">Welcome back!</p>
         <p className="center-align login-text">Login to your account.</p>
         <p className="center-align error-message">
-          {errorMessage ? errorMessage : ""}
+          {userMessage ? userMessage : ""}
         </p>
         <form onSubmit={handleSubmit} className="form-container">
           <input
