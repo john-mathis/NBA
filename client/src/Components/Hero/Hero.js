@@ -5,7 +5,7 @@ import "../Hero/Hero.css";
 import { Context } from "../Context/Context";
 
 const Hero = () => {
-  const { signedIn } = useContext(Context);
+  const { cookies } = useContext(Context);
   return (
     <section className="hero-wrapper">
       <div className="hero-container">
@@ -18,7 +18,7 @@ const Hero = () => {
             content.
           </p>
           <div className="hero-btn-container">
-            {signedIn ? (
+            {cookies.access_token ? (
               ""
             ) : (
               <Link to="/login" className="hero-btn">

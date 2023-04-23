@@ -44,7 +44,7 @@ router.post("/login", async (req, res) => {
 
   //   If the password is incorrect, return a message saying the username or password is incorrect.
   if (!isPasswordaValid) {
-    return res.status(400).json({ message: "Invalid login credentials" });
+    return res.status(400).json({ message: "Invalid username or password" });
   }
 
   //   If the password is correct, create a JWT token.

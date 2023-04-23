@@ -28,11 +28,19 @@
     display: flex;
     align-items: center;
     height: 3rem;
+    cursor: pointer;
+}
 
+.dashboard-list-item:hover {
+    background-color: var(--light-grey);
 }
 
 .light .dashboard-list-item {
     background-color: var(--white);
+}
+
+.light .dashboard-list-item:hover {
+    background-color: var(--icon-hover);
 }
 
 .dashboard-icon {

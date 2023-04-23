@@ -2,6 +2,8 @@ import React from "react";
 import "../Dashboard/Dashboard.css";
 import { AiOutlineSetting } from "react-icons/ai";
 import { MdAccountCircle } from "react-icons/md";
+import { RiTeamLine } from "react-icons/ri";
+import { GiBasketballJersey } from "react-icons/gi";
 
 const Dashboard = () => {
   return (
@@ -19,7 +21,15 @@ const Dashboard = () => {
             <MdAccountCircle className="dashboard-icon" />
             Account
           </li>
-          <li></li>
+          <li className="dashboard-list-item">
+            <RiTeamLine className="dashboard-icon" />
+            Favorite Teams
+          </li>
+
+          <li className="dashboard-list-item">
+            <GiBasketballJersey className="dashboard-icon" />
+            Favorite Players
+          </li>
         </ul>
       </div>
     </section>
