@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import Requests from "../Requests/Requests";
 import { Context } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../Team Dropdown/TeamDropdown.css";
 const PlayersDropdown = () => {
   return (
@@ -24,7 +25,9 @@ const TeamDropdown = () => {
 
   const handleTeamSwitch = (e) => {
     setTeam(e.target.value);
+    console.log(e.target);
   };
+
   return (
     <select value={team} onChange={handleTeamSwitch}>
       <option value={27}>76ers</option>
