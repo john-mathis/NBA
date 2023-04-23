@@ -15,7 +15,6 @@ const SignUp = () => {
         username,
         password,
       });
-      console.log(response);
       setUserMessage(response.data.message);
       setUsername("");
       setPassword("");

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import "../Hero/Hero.css";
+import { Context } from "../Context/Context";
 
 const Hero = () => {
+  const { signedIn } = useContext(Context);
   return (
     <section className="hero-wrapper">
       <div className="hero-container">
@@ -16,9 +18,14 @@ const Hero = () => {
             content.
           </p>
           <div className="hero-btn-container">
-            <Link to="/login" className="hero-btn">
-              Get Started
-            </Link>
+            {signedIn ? (
+              ""
+            ) : (
+              <Link to="/login" className="hero-btn">
+                Get Started
+              </Link>
+            )}
+
             <Link to="/teams" className="hero-btn">
               Browse Teams
             </Link>

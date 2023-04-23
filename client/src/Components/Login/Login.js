@@ -1,16 +1,15 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import "../Login/Login.css";
 import { Context } from "../Context/Context";
 
 const Login = () => {
-  const { signedIn, setSignedIn } = useContext(Context);
+  const { signedIn, setSignedIn, setCookies } = useContext(Context);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [userMessage, setUserMessage] = useState("");
-  const [_, setCookies] = useCookies(["access_token"]);
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {

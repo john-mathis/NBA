@@ -6,11 +6,10 @@ import { HiMoon } from "react-icons/hi";
 import { BsFillSunFill } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import { BiUserCircle } from "react-icons/bi";
-import { useCookies } from "react-cookie";
 import { Context } from "../Context/Context";
 
 const Navbar = () => {
-  const { signedIn, setSignedIn } = useContext(Context);
+  const { signedIn, setSignedIn, cookies, setCookies } = useContext(Context);
   const [openMenuClass, setOpenMenuClass] = useState("nav-icon show");
   const [closeMenuClass, setCloseMenuClass] = useState("nav-icon hide");
   const [navLinksClass, setNavLinksClass] = useState(
@@ -18,7 +17,6 @@ const Navbar = () => {
   );
 
   const navigate = useNavigate();
-  const [cookies, setCookies] = useCookies(["access_token"]);
 
   const logout = () => {
     setCookies("access_token", "");

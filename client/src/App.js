@@ -3,9 +3,7 @@ import "./App.css";
 import Home from "./Components/Home/Home";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Standings from "./Components/Standings/Standings";
-import { Routes, Route } from "react-router-dom";
 import Requests from "./Components/Requests/Requests";
-import { Context } from "./Components/Context/Context";
 import Teams from "./Components/Teams/Teams";
 import TeamDetails from "./Components/TeamDetails/TeamDetails";
 import RecentGamesStats from "./Components/RecentGameStats/RecentGamesStats";
@@ -17,6 +15,9 @@ import Careers from "./Components/Careers/Careers";
 import Sponsors from "./Components/Sponsors/Sponsors";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
+import { Routes, Route } from "react-router-dom";
+import { Context } from "./Components/Context/Context";
+import { useCookies } from "react-cookie";
 
 const App = () => {
   // Global State
@@ -31,8 +32,8 @@ const App = () => {
   const [versusTeamIDs, setVersusTeamIDs] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [cookies, setCookies] = useState("");
   const [signedIn, setSignedIn] = useState(false);
+  const [cookies, setCookies] = useCookies(["access_token", ""]);
 
   return (
     <Context.Provider
@@ -80,7 +81,7 @@ const App = () => {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route
           path="/dashboard"
-          element={signedIn ? <Dashboard /> : <Login />}
+          element={cookies.access_token ? <Dashboard /> : <Login />}
         />
       </Routes>
       <Footer />
