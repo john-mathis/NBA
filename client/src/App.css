@@ -22,9 +22,7 @@ body {
   color: var(--white);
 }
 
-#root {
-  height: 100vh;
-}
+
 
 img {
   max-width: 100%;
