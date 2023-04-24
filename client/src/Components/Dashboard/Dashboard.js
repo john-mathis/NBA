@@ -16,19 +16,23 @@ const Dashboard = () => {
           <li className="dashboard-list-item">
             <AiOutlineSetting className="dashboard-icon" />
             General
+            <span className="beta-logo">BETA</span>
           </li>
           <li className="dashboard-list-item">
             <MdAccountCircle className="dashboard-icon" />
             Account
+            <span className="beta-logo">BETA</span>
           </li>
           <li className="dashboard-list-item">
             <RiTeamLine className="dashboard-icon" />
             Favorite Teams
+            <span className="beta-logo">BETA</span>
           </li>
 
           <li className="dashboard-list-item">
             <GiBasketballJersey className="dashboard-icon" />
             Favorite Players
+            <span className="beta-logo">BETA</span>
           </li>
         </ul>
       </div>

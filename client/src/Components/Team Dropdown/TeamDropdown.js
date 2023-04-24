@@ -1,8 +1,7 @@
 import React, { useContext, useEffect } from "react";
-import Requests from "../Requests/Requests";
 import { Context } from "../Context/Context";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+
 import "../Team Dropdown/TeamDropdown.css";
 const PlayersDropdown = () => {
   return (
@@ -15,16 +14,18 @@ const PlayersDropdown = () => {
 };
 
 const TeamDropdown = () => {
-  const { team, setTeam, search, setSearch } = useContext(Context);
+  const { team, setTeam } = useContext(Context);
   const navigate = useNavigate();
 
   useEffect(() => {
-    setSearch(Requests.fetchPlayers);
-  }, [search]);
+    console.log(team);
+  }, [team]);
   // setSeason(null);
 
   const handleTeamSwitch = (e) => {
     setTeam(e.target.value);
+    console.log(team);
+    navigate(`/teamdetails/${team}`);
   };
 
   return (
