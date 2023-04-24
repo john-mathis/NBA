@@ -1,8 +1,5 @@
 import React from "react";
 import "../Footer/Footer.css";
-import { AiFillGithub } from "react-icons/ai";
-import { BiExport } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (

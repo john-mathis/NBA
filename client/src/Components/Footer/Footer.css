@@ -1,5 +1,12 @@
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
 .footer-container {
     max-width: 50rem;
+    height: fit-content;
     margin: auto;
     border-bottom: 1px solid var(--light-grey);
 }

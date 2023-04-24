@@ -25,7 +25,6 @@ const TeamDropdown = () => {
 
   const handleTeamSwitch = (e) => {
     setTeam(e.target.value);
-    console.log(e.target);
   };
 
   return (
