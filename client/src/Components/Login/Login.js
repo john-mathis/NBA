@@ -5,7 +5,7 @@ import "../Login/Login.css";
 import { Context } from "../Context/Context";
 
 const Login = () => {
-  const { signedIn, setSignedIn, setCookies } = useContext(Context);
+  const { setCookies } = useContext(Context);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [userMessage, setUserMessage] = useState("");
@@ -21,8 +21,8 @@ const Login = () => {
       });
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
+      window.localStorage.setItem("username", username);
       navigate("/");
-      setSignedIn(true);
     } catch (err) {
       console.error(err);
       setUserMessage(err.response.data.message);

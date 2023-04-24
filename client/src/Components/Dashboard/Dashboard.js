@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <section id="dashboard">
       <div className="dashboard-container">
-        <h3>Hi</h3>
+        <h3>Hi {localStorage.getItem("username")}!</h3>
         <p>Adjust your preferred settings here.</p>
 
         <ul>

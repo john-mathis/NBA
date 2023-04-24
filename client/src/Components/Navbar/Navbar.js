@@ -9,7 +9,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { Context } from "../Context/Context";
 
 const Navbar = () => {
-  const { signedIn, setSignedIn, cookies, setCookies } = useContext(Context);
+  const { cookies, setCookies } = useContext(Context);
   const [openMenuClass, setOpenMenuClass] = useState("nav-icon show");
   const [closeMenuClass, setCloseMenuClass] = useState("nav-icon hide");
   const [navLinksClass, setNavLinksClass] = useState(
@@ -21,7 +21,6 @@ const Navbar = () => {
   const logout = () => {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
-    setSignedIn(false);
     navigate("/login");
   };
 
@@ -41,17 +40,17 @@ const Navbar = () => {
     document.documentElement.classList.remove("light");
     document.documentElement.classList.add("dark");
     document.body.style.backgroundColor = " var(--dark-grey)";
-    sessionStorage.setItem("mode", "dark");
+    localStorage.setItem("mode", "dark");
   };
 
   const handleLightMode = () => {
     document.documentElement.classList.remove("dark");
     document.documentElement.classList.add("light");
     document.body.style.backgroundColor = " var(--white)";
-    sessionStorage.setItem("mode", "light");
+    localStorage.setItem("mode", "light");
   };
 
-  if (sessionStorage.getItem("mode") === "dark") {
+  if (localStorage.getItem("mode") === "dark") {
     handleDarkMode();
   } else {
     handleLightMode();

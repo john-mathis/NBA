@@ -10,7 +10,11 @@ const Hero = () => {
     <section className="hero-wrapper">
       <div className="hero-container">
         <div className="hero-text-container">
-          <h1 className="hero-header">NBA STATS</h1>
+          <h1 className="hero-header">
+            {cookies.access_token
+              ? `Welcome back, ${localStorage.getItem("username")}!`
+              : "NBA STATS"}
+          </h1>
           <p className="hero-heading">
             NBA STATS is a comprehensive online platform that provides fans with
             up-to-date news, scores, standings, and stats from the National

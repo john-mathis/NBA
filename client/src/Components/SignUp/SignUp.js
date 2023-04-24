@@ -10,6 +10,11 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!username || !password) {
+      setUserMessage("Please fill in fields");
+    }
+
     try {
       const response = await axios.post("http://localhost:3001/auth/signup", {
         username,
@@ -19,7 +24,7 @@ const SignUp = () => {
       setUsername("");
       setPassword("");
     } catch (err) {
-      console.log(err);
+      console.error(err);
     }
   };
 
@@ -32,7 +37,7 @@ const SignUp = () => {
         <p className="center-align error-message">
           {userMessage ? userMessage : ""}
         </p>
-        <form action="POST" className="form-container" onSubmit={handleSubmit}>
+        <form className="form-container" onSubmit={handleSubmit}>
           <input
             onChange={(e) => {
               setUsername(e.target.value);
