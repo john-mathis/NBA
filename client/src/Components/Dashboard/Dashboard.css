@@ -1,5 +1,13 @@
 #dashboard {
-    height: 80vh;
+    height: fit-content;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (min-width:1024px) {
+    #dashboard {
+        display: flex;
+    }
 }
 
 .light .dashboard-container {
@@ -10,19 +18,35 @@
 .dashboard-container {
     border-radius: 5px;
     margin: 2rem auto;
-    padding: 1rem;
+    padding: 2rem;
     width: 75%;
     display: flex;
     flex-direction: column;
     background-color: var(--black);
     position: relative;
+    height: 30rem;
 }
 
+@media screen and (min-width:1024px) {
+    .dashboard-container {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .dashboard-container {
+        max-width: 35rem;
+    }
+}
+
+.active-list-item {
+    background-color: var(--red);
+}
 
 .dashboard-list-item {
     width: 100%;
     border-radius: 2px;
-    margin: .7rem 0;
+    margin: 1rem 0;
     padding: .5rem;
     background-color: var(--dark-grey);
     display: flex;
@@ -30,6 +54,7 @@
     height: 3rem;
     cursor: pointer;
 }
+
 
 .dashboard-list-item:hover {
     background-color: var(--light-grey);

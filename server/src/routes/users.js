@@ -54,4 +54,6 @@ router.post("/login", async (req, res) => {
   res.json({ token, userID: user._id });
 });
 
+// Sending a PATCH request to update a user's username
+
 export { router as userRouter };
