@@ -42,7 +42,6 @@ const Dashboard = () => {
           >
             <AiOutlineSetting className="dashboard-icon" />
             General
-            <span className="beta-logo">BETA</span>
           </li>
           <li
             className="dashboard-list-item"
@@ -52,7 +51,6 @@ const Dashboard = () => {
           >
             <MdAccountCircle className="dashboard-icon" />
             Account
-            <span className="beta-logo">BETA</span>
           </li>
           <li
             className="dashboard-list-item"

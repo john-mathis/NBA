@@ -2,13 +2,25 @@
     height: fit-content;
     display: grid;
     place-items: center;
+    height: 100vh;
+
 }
 
 @media screen and (min-width:1024px) {
     #dashboard {
+        margin: auto;
         display: flex;
+        height: 60vh;
+        width: 65rem;
     }
 }
+
+@media screen and (min-width:1400px) {
+    #dashboard {
+        width: 75rem;
+    }
+}
+
 
 .light .dashboard-container {
     background-color: var(--light-grey);
@@ -17,14 +29,14 @@
 
 .dashboard-container {
     border-radius: 5px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 2rem;
     width: 75%;
     display: flex;
     flex-direction: column;
     background-color: var(--black);
     position: relative;
-    height: 30rem;
+    height: 25rem;
 }
 
 @media screen and (min-width:1024px) {

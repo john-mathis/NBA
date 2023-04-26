@@ -1,0 +1,25 @@
+.light .theme-toggle {
+    background-color: var(--white);
+}
+
+
+.light .theme-toggle:hover {
+    background-color: var(--icon-hover);
+}
+
+.theme-toggle {
+    margin: 3rem auto;
+    padding: 3rem 2rem;
+    border-radius: 2px;
+    text-align: center;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grey);
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background-color: var(--light-grey);
+}
