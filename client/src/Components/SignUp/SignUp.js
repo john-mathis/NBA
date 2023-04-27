@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [userMessage, setUserMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -17,10 +19,14 @@ const SignUp = () => {
 
     try {
       const response = await axios.post("http://localhost:3001/auth/signup", {
+        firstName,
+        lastName,
         username,
         password,
       });
       setUserMessage(response.data.message);
+      setFirstName("");
+      setLastName("");
       setUsername("");
       setPassword("");
     } catch (err) {
@@ -39,6 +45,28 @@ const SignUp = () => {
           {userMessage ? userMessage : ""}
         </p>
         <form className="form-container" onSubmit={handleSubmit}>
+          <input
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
+            value={firstName}
+            className="login-input"
+            type="text"
+            placeholder="First name"
+            required
+          />
+
+          <input
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
+            value={lastName}
+            className="login-input"
+            type="text"
+            placeholder="Last name"
+            required
+          />
+
           <input
             onChange={(e) => {
               setUsername(e.target.value);

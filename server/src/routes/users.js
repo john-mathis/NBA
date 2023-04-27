@@ -9,7 +9,7 @@ const app = express();
 // Sedning a POST request to register a user
 router.post("/signup", async (req, res) => {
   // Storing username name and password.
-  const { username, password } = req.body;
+  const { firstName, lastName, username, password } = req.body;
 
   //   Searching to see if the user already exists.
   const existingUser = await userModel.findOne({ username });
@@ -21,6 +21,8 @@ router.post("/signup", async (req, res) => {
   const hashedPassword = await bcrypt.hash(password, 10);
   //   Create a new user with the collected username and password.
   const newUser = new userModel({
+    firstName,
+    lastName,
     username,
     password: hashedPassword,
   });
@@ -51,7 +53,12 @@ router.post("/login", async (req, res) => {
   //   If the password is correct, create a JWT token.
   //   CREATE ENVIORMENT VARIABLE FOR SECRET TOKEN
   const token = jwt.sign({ id: user._id }, "secret");
-  res.json({ token, userID: user._id });
+  const firstName = await userModel.findOne({ firstName });
+
+  res.json({
+    token,
+    userID: user._id,
+  });
 });
 
 // Sending a PATCH request to update a user's username

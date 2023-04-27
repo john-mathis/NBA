@@ -1,0 +1,5 @@
+.account-container input {
+    background-color: var(--dark-grey);
+    border: none;
+    border-radius: 3px;
+}

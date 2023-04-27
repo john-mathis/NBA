@@ -12,7 +12,9 @@ const Hero = () => {
         <div className="hero-text-container">
           <h1 className="hero-header">
             {cookies.access_token
-              ? `Welcome back, ${localStorage.getItem("username")}!`
+              ? `Welcome back, ${localStorage
+                  .getItem("username")
+                  .toLocaleUpperCase()}!`
               : "NBA STATS"}
           </h1>
           <p className="hero-heading">
