@@ -1,3 +1,7 @@
+.light .account-container input {
+    background-color: var(--white);
+}
+
 .account-container input {
     background-color: var(--dark-grey);
     border: none;

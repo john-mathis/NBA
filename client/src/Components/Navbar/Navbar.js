@@ -77,7 +77,11 @@ const Navbar = () => {
           </a>
 
           {cookies.access_token ? (
-            <Link to="/dashboard" className="mobile-dashboard dashboard">
+            <Link
+              to="/dashboard"
+              className="mobile-dashboard dashboard"
+              onClick={closeMenu}
+            >
               <div className="nav-dashboard-container">
                 <BiUserCircle className=" dashboard-icon nav-icon" />
                 <p>Dashboard</p>

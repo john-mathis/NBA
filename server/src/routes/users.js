@@ -53,7 +53,7 @@ router.post("/login", async (req, res) => {
   //   If the password is correct, create a JWT token.
   //   CREATE ENVIORMENT VARIABLE FOR SECRET TOKEN
   const token = jwt.sign({ id: user._id }, "secret");
-  const firstName = await userModel.findOne({ firstName });
+  // const firstName = await userModel.findOne({ firstName });
 
   res.json({
     token,
@@ -62,5 +62,13 @@ router.post("/login", async (req, res) => {
 });
 
 // Sending a PATCH request to update a user's username
+router.patch("/dashboard", async (req, res) => {
+  // Storing username
+  const { username } = req.body;
+
+  return req.userID.json({ message: "USER ID" });
+
+  // const user = await userModel.findOneAndUpdate({ username });
+});
 
 export { router as userRouter };
