@@ -110,7 +110,7 @@ const Careers = () => {
             <p className="careers-title">Data Scientist</p>
             <p className="careers-description">
               Join the NBA Stats team as a Data Scientist to help us analyze the
-              crypto markets for our upcoming decentralized finance project.
+              live game statistics for our upcoming player performance project.
             </p>
           </div>
           <div className="careers-info">
