@@ -17,14 +17,8 @@ const TeamDropdown = () => {
   const { team, setTeam } = useContext(Context);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log(team);
-  }, [team]);
-  // setSeason(null);
-
   const handleTeamSwitch = (e) => {
     setTeam(e.target.value);
-    console.log(team);
     navigate(`/teamdetails/${team}`);
   };
 

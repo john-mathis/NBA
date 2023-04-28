@@ -8,12 +8,9 @@ const Account = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.patch(
-        "http://localhost:3001/auth/dashboard",
-        {
-          username,
-        }
-      );
+      const response = await axios.patch("http://localhost:3001/dashboard", {
+        username,
+      });
     } catch (err) {
       console.error(err);
     }

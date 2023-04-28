@@ -66,7 +66,7 @@ router.patch("/dashboard", async (req, res) => {
   // Storing username
   const { username } = req.body;
 
-  return req.userID.json({ message: "USER ID" });
+  return res.status(200).json({ message: username });
 
   // const user = await userModel.findOneAndUpdate({ username });
 });
