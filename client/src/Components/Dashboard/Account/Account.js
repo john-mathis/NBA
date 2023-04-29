@@ -4,20 +4,22 @@ import "../Account/Account.css";
 
 const Account = () => {
   const [username, setUserName] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const response = await axios.patch("http://localhost:3001/dashboard", {
-        username,
-      });
+      const response = await axios.patch(
+        "https://localhost:3001/auth/dashboard",
+        { username }
+      );
+      console.log(response);
     } catch (err) {
       console.error(err);
     }
   };
 
   return (
-    <form className="account-container">
+    <form onSubmit={handleSubmit} className="account-container">
       <h3 className="">Change Username</h3>
       <input
         type="text"
@@ -28,9 +30,7 @@ const Account = () => {
         value={username}
         required
       />
-      <button onClick={handleSubmit} className="cta-btn">
-        Update Username
-      </button>
+      <button className="cta-btn">Update Username</button>
     </form>
   );
 };

@@ -30,7 +30,6 @@ const SignUp = () => {
       setUsername("");
       setPassword("");
     } catch (err) {
-      console.error(err);
       setUserMessage(err.response.data.message);
     }
   };

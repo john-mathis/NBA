@@ -15,7 +15,9 @@ router.post("/signup", async (req, res) => {
   const existingUser = await userModel.findOne({ username });
   //   If the username exists, return a message saying the username already exists.
   if (existingUser) {
-    return res.status(400).json({ message: "User already exists!" });
+    return res
+      .status(400)
+      .json({ message: "Username is taken! Please choose another" });
   }
   //   If the username is not taken, hash the user's password.
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -53,8 +55,6 @@ router.post("/login", async (req, res) => {
   //   If the password is correct, create a JWT token.
   //   CREATE ENVIORMENT VARIABLE FOR SECRET TOKEN
   const token = jwt.sign({ id: user._id }, "secret");
-  // const firstName = await userModel.findOne({ firstName });
-
   res.json({
     token,
     userID: user._id,
@@ -66,8 +66,11 @@ router.patch("/dashboard", async (req, res) => {
   // Storing username
   const { username } = req.body;
 
-  return res.status(200).json({ message: username });
+  const user = await userModel.findOne({ username });
 
+  if (user) {
+    return res.status(200).json({ message: "working" });
+  }
   // const user = await userModel.findOneAndUpdate({ username });
 });
 
