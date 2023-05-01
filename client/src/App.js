@@ -32,6 +32,7 @@ const App = () => {
   const [versusTeamIDs, setVersusTeamIDs] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [userMessage, setUserMessage] = useState("");
 
   const [cookies, setCookies] = useCookies(["access_token", ""]);
 
@@ -62,6 +63,8 @@ const App = () => {
         setLoading,
         cookies,
         setCookies,
+        userMessage,
+        setUserMessage,
       }}
     >
       <Navbar />

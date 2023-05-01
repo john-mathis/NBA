@@ -63,15 +63,27 @@ router.post("/login", async (req, res) => {
 
 // Sending a PATCH request to update a user's username
 router.patch("/dashboard", async (req, res) => {
-  // Storing username
-  const { username } = req.body;
+  const { username, newUserName } = req.body;
 
-  const user = await userModel.findOne({ username });
+  const currentUserName = await userModel.findOne({ username });
+  const checkNewUserName = await userModel.findOne({ newUserName });
 
-  if (user) {
-    return res.status(200).json({ message: "working" });
+  if (!currentUserName) {
+    return res
+      .status(400)
+      .json({ message: "Username does not match current username" });
   }
-  // const user = await userModel.findOneAndUpdate({ username });
+
+  if (checkNewUserName) {
+    return res.status(400).json({ message: "New username is taken" });
+  }
+
+  const setNewUserName = await userModel.findOneAndUpdate(
+    { username: username },
+    { $set: { username: newUserName } }
+  );
+
+  return res.status(200).json({ message: "Username successfully updated" });
 });
 
 export { router as userRouter };

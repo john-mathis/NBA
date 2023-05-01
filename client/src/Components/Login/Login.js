@@ -5,10 +5,9 @@ import "../Login/Login.css";
 import { Context } from "../Context/Context";
 
 const Login = () => {
-  const { setCookies } = useContext(Context);
+  const { setCookies, setUserMessage, userMessage } = useContext(Context);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [userMessage, setUserMessage] = useState("");
 
   const navigate = useNavigate();
 
