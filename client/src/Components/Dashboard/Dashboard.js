@@ -4,10 +4,12 @@ import { AiOutlineSetting } from "react-icons/ai";
 import { MdAccountCircle } from "react-icons/md";
 import { RiTeamLine } from "react-icons/ri";
 import { GiBasketballJersey } from "react-icons/gi";
+import { MdManageAccounts } from "react-icons/md";
 import General from "./General/General";
 import Account from "./Account/Account";
 import FavoriteTeams from "./FavoriteTeams/FavoriteTeams";
 import FavoritePlayers from "./FavoritePlayers/FavoritePlayers";
+import Management from "./Management/Management";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("General");
@@ -18,6 +20,8 @@ const Dashboard = () => {
         return <General />;
       case "Account":
         return <Account />;
+      case "Management":
+        return <Management />;
       case "Favorite Teams":
         return <FavoriteTeams />;
       case "Favorite Players":
@@ -52,6 +56,17 @@ const Dashboard = () => {
             <MdAccountCircle className="dashboard-icon" />
             Account
           </li>
+
+          <li
+            className="dashboard-list-item"
+            onClick={() => {
+              setActiveTab("Management");
+            }}
+          >
+            <MdManageAccounts className="dashboard-icon" />
+            Management
+          </li>
+
           <li
             className="dashboard-list-item"
             onClick={() => {

@@ -78,12 +78,35 @@ router.patch("/dashboard", async (req, res) => {
     return res.status(400).json({ message: "New username is taken" });
   }
 
+  if (username === newUserName) {
+    return res
+      .status(400)
+      .json({ message: "New username can't match current username" });
+  }
+
   const setNewUserName = await userModel.findOneAndUpdate(
     { username: username },
     { $set: { username: newUserName } }
   );
 
   return res.status(200).json({ message: "Username successfully updated" });
+});
+
+// Sending a delete request to delete a user's account.
+router.delete("/dashboard", async (req, res) => {
+  const { username } = req.body;
+
+  const userToDelete = await userModel.findOne({ username });
+
+  if (username) {
+    const deleteUser = await userModel.findOneAndDelete({ username: username });
+  } else {
+    res
+      .status(400)
+      .json({ message: "An error occured while trying to delete this user." });
+  }
+
+  return res.status(200).json({ message: "User sucessfully deleted." });
 });
 
 export { router as userRouter };

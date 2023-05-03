@@ -9,7 +9,7 @@ import { BiUserCircle } from "react-icons/bi";
 import { Context } from "../Context/Context";
 
 const Navbar = () => {
-  const { cookies, setCookies } = useContext(Context);
+  const { cookies, setCookies, setUserMessage } = useContext(Context);
   const [openMenuClass, setOpenMenuClass] = useState("nav-icon show");
   const [closeMenuClass, setCloseMenuClass] = useState("nav-icon hide");
   const [navLinksClass, setNavLinksClass] = useState(
@@ -23,6 +23,7 @@ const Navbar = () => {
     window.localStorage.removeItem("userID");
     window.localStorage.removeItem("username");
     navigate("/login");
+    setUserMessage("");
   };
 
   const openMenu = () => {
