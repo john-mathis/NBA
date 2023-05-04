@@ -86,7 +86,8 @@ router.patch("/dashboard", async (req, res) => {
 
   const setNewUserName = await userModel.findOneAndUpdate(
     { username: username },
-    { $set: { username: newUserName } }
+    { $set: { username: newUserName } },
+    { returnNewDocument: true }
   );
 
   return res.status(200).json({ message: "Username successfully updated" });
@@ -98,8 +99,8 @@ router.delete("/dashboard", async (req, res) => {
 
   const userToDelete = await userModel.findOne({ username });
 
-  if (username) {
-    const deleteUser = await userModel.findOneAndDelete({ username: username });
+  if (userToDelete) {
+    await userModel.findOneAndDelete({ username: username });
   } else {
     res
       .status(400)

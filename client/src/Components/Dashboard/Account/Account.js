@@ -5,8 +5,8 @@ import "../Account/Account.css";
 import { Context } from "../../Context/Context";
 
 const Account = () => {
-  const { userMessage, setUserMessage } = useContext(Context);
-  const [username, setUserName] = useState("");
+  const { userMessage, setUserMessage, username, setUserName } =
+    useContext(Context);
   const [newUserName, setNewUserName] = useState("");
 
   const navigate = useNavigate();

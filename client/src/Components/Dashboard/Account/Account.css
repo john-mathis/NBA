@@ -1,8 +1,6 @@
 .account-container {
     margin: 1rem 0;
     height: 100%;
-    /* display: grid; */
-    place-items: center;
 }
 
 .account-container h3 {

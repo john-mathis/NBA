@@ -27,7 +27,7 @@ const Management = () => {
     <form onSubmit={handleDelete} className="account-container">
       <h3>Account Management</h3>
       <p className="center-align error-message">
-        {/* {userMessage ? userMessage : ""} */}
+        {userMessage ? userMessage : ""}
       </p>
 
       <input

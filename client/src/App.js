@@ -33,7 +33,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [userMessage, setUserMessage] = useState("");
-
+  const [username, setUserName] = useState("");
   const [cookies, setCookies] = useCookies(["access_token", ""]);
 
   return (
@@ -65,6 +65,8 @@ const App = () => {
         setCookies,
         userMessage,
         setUserMessage,
+        setUserName,
+        username,
       }}
     >
       <Navbar />
