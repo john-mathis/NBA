@@ -14,10 +14,11 @@ const Management = () => {
         "http://localhost:3001/auth/dashboard",
         { username }
       );
-      window.localStorage.removeItem("userID");
-      window.localStorage.removeItem("username");
-      navigate("/login");
+      // window.localStorage.removeItem("userID");
+      // window.localStorage.removeItem("username");
+      // navigate("/login");
       setUserMessage("");
+      setUserName("");
     } catch (err) {
       console.error(err);
       setUserMessage(err.response.data.message);
@@ -41,9 +42,7 @@ const Management = () => {
       />
       <div className="delete-user-container">
         <button className="cta-btn">Delete Account</button>
-        <button disabled className="cta-btn">
-          Archive Account
-        </button>
+        <button className="cta-btn">Archive Account</button>
       </div>
     </form>
   );
