@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e622571b.css",
+    "main.js": "./static/js/main.a191f2e9.js",
+    "static/media/kia.png": "./static/media/kia.020142f85011b115eafc.png",
+    "static/media/statefarm.png": "./static/media/statefarm.12b3bc645c4317d6575e.png",
+    "static/media/beats.png": "./static/media/beats.f4a748f092d203bc7736.png",
+    "static/media/at&t.png": "./static/media/at&t.e42699d8aa3df56bb0a9.png",
+    "static/media/pepsico.png": "./static/media/pepsico.573ee261034e2118c0c5.png",
+    "static/media/rakuten.png": "./static/media/rakuten.e637bf6553c8dc477c26.png",
+    "static/media/gatorade.png": "./static/media/gatorade.79552455327768b1df9d.png",
+    "static/media/clorox.png": "./static/media/clorox.554eb30905b542d31b65.png",
+    "static/media/logo.png": "./static/media/logo.e3a6cfc3a89a324b5b65.png",
+    "static/media/ticketmaster.png": "./static/media/ticketmaster.1f85d633d4b4ccfb2e58.png",
+    "static/media/amex.png": "./static/media/amex.338cd681a6afc75592a3.png",
+    "static/media/2k.png": "./static/media/2k.31cdf30dcabdfb6bcae9.png",
+    "static/media/tacobell.png": "./static/media/tacobell.30cd8a5234640b251d0f.png",
+    "static/media/coinbase.png": "./static/media/coinbase.b3af59ea72787760ff2f.png",
+    "static/media/oculus.png": "./static/media/oculus.a7d0b5eb6bec45acee7d.png",
+    "static/media/microsoft.png": "./static/media/microsoft.d0753ba1ca5a465bd3f2.png",
+    "index.html": "./index.html",
+    "main.e622571b.css.map": "./static/css/main.e622571b.css.map",
+    "main.a191f2e9.js.map": "./static/js/main.a191f2e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e622571b.css",
+    "static/js/main.a191f2e9.js"
+  ]
+}

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+
 import "../Account/Account.css";
 import { Context } from "../../Context/Context";
 
@@ -8,8 +8,6 @@ const Account = () => {
   const { userMessage, setUserMessage, username, setUserName } =
     useContext(Context);
   const [newUserName, setNewUserName] = useState("");
-
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();

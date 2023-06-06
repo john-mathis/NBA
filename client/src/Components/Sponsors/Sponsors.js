@@ -15,7 +15,6 @@ import Clorox from "../../assets/clorox.png";
 import Ticketmaster from "../../assets/ticketmaster.png";
 import Oculus from "../../assets/oculus.png";
 import Tacobell from "../../assets/tacobell.png";
-import Footer from "../Footer/Footer";
 
 const Sponsors = () => {
   return (
