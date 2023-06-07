@@ -15,10 +15,13 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/auth/login", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://the-nba-stats.onrender.com/auth/login",
+        {
+          username,
+          password,
+        }
+      );
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
       window.localStorage.setItem("username", username);

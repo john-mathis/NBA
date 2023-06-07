@@ -12,7 +12,7 @@ const Management = () => {
     e.preventDefault();
     try {
       const response = await axios.delete(
-        "http://localhost:3001/auth/dashboard",
+        "https://the-nba-stats.onrender.com/auth/dashboard",
         {
           username,
         }

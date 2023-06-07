@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.e622571b.css",
-    "main.js": "./static/js/main.7d19c707.js",
+    "main.js": "./static/js/main.0e3a5dfa.js",
     "static/media/kia.png": "./static/media/kia.020142f85011b115eafc.png",
     "static/media/statefarm.png": "./static/media/statefarm.12b3bc645c4317d6575e.png",
     "static/media/beats.png": "./static/media/beats.f4a748f092d203bc7736.png",
@@ -20,10 +20,10 @@
     "static/media/microsoft.png": "./static/media/microsoft.d0753ba1ca5a465bd3f2.png",
     "index.html": "./index.html",
     "main.e622571b.css.map": "./static/css/main.e622571b.css.map",
-    "main.7d19c707.js.map": "./static/js/main.7d19c707.js.map"
+    "main.0e3a5dfa.js.map": "./static/js/main.0e3a5dfa.js.map"
   },
   "entrypoints": [
     "static/css/main.e622571b.css",
-    "static/js/main.7d19c707.js"
+    "static/js/main.0e3a5dfa.js"
   ]
 }
