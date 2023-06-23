@@ -57,7 +57,11 @@ const UpcomingGames = () => {
   return (
     <>
       <h1 className="center-align page-header">Upcoming Games</h1>
-      <div className="current-games-container">{displayScheduledGames}</div>
+      <div className="current-games-container">
+        {nextTenScheduledGames?.length > 0
+          ? displayScheduledGames
+          : "Eliminated from playoff contention"}
+      </div>
     </>
   );
 };

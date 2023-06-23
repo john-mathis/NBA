@@ -117,6 +117,7 @@ tr {
     align-items: center;
     justify-content: flex-start;
     color: var(--white);
+    text-decoration: underline;
 }
 
 .light .team-info {

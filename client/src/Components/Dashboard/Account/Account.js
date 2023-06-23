@@ -13,7 +13,7 @@ const Account = () => {
     e.preventDefault();
     try {
       const response = await axios.patch(
-        "https://the-nba-stats.onrender.com/auth/dashboard",
+        "http://localhost:3001/auth/dashboard",
         { username, newUserName }
       );
       setUserName("");

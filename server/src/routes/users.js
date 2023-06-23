@@ -98,7 +98,6 @@ router.patch("/dashboard", async (req, res) => {
 router.delete("/dashboard", async (req, res) => {
   const { username } = req.body;
   console.log({ username });
-
   const userToDelete = await userModel.findOne({ username });
 
   if (userToDelete) {
