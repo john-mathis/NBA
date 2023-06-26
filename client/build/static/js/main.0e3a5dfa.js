@@ -19767,10 +19767,13 @@
                               t.preventDefault(),
                               (e.prev = 1),
                               (e.next = 4),
-                              Is.patch("http://localhost:3001/auth/dashboard", {
-                                username: i,
-                                newUserName: s,
-                              })
+                              Is.patch(
+                                "https://the-nba-stats.onrender.com/auth/dashboard",
+                                {
+                                  username: i,
+                                  newUserName: s,
+                                }
+                              )
                             );
                           case 4:
                             (n = e.sent),
@@ -19871,7 +19874,7 @@
                                 (e.prev = 1),
                                 (e.next = 4),
                                 Is.delete(
-                                  "http://localhost:3001/auth/dashboard",
+                                  "https://the-nba-stats.onrender.com/auth/dashboard",
                                   { username: i }
                                 )
                               );
@@ -38529,10 +38532,13 @@
                               t.preventDefault(),
                               (e.prev = 1),
                               (e.next = 4),
-                              Is.post("http://localhost:3001/auth/login", {
-                                username: a,
-                                password: l,
-                              })
+                              Is.post(
+                                "https://the-nba-stats.onrender.com/auth/login",
+                                {
+                                  username: a,
+                                  password: l,
+                                }
+                              )
                             );
                           case 4:
                             (i = e.sent),
@@ -38677,12 +38683,15 @@
                               (n && a) || g("Please fill in fields"),
                               (e.prev = 2),
                               (e.next = 5),
-                              Is.post("http://localhost:3001/auth/signup", {
-                                firstName: l,
-                                lastName: d,
-                                username: n,
-                                password: a,
-                              })
+                              Is.post(
+                                "https://the-nba-stats.onrender.com/auth/signup",
+                                {
+                                  firstName: l,
+                                  lastName: d,
+                                  username: n,
+                                  password: a,
+                                }
+                              )
                             );
                           case 5:
                             (i = e.sent),
@@ -39893,16 +39902,14 @@
                   window.addEventListener("offline", n, !1),
                   ($r = !0)));
             })(),
-        i
-          .createRoot(document.getElementById("root"))
-          .render(
-            (0, Ke.jsx)(Fe, {
-              children: (0, Ke.jsx)(Gi, {
-                store: Px,
-                children: (0, Ke.jsx)(Cx, {}),
-              }),
-            })
-          );
+        i.createRoot(document.getElementById("root")).render(
+          (0, Ke.jsx)(Fe, {
+            children: (0, Ke.jsx)(Gi, {
+              store: Px,
+              children: (0, Ke.jsx)(Cx, {}),
+            }),
+          })
+        );
     })();
 })();
 //# sourceMappingURL=main.0e3a5dfa.js.map

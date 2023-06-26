@@ -18,12 +18,15 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3001/auth/signup", {
-        firstName,
-        lastName,
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "https://the-nba-stats.onrender.com/auth/signup",
+        {
+          firstName,
+          lastName,
+          username,
+          password,
+        }
+      );
       setUserMessage(response.data.message);
       setFirstName("");
       setLastName("");
