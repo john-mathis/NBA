@@ -14,8 +14,9 @@ const RecentGameScores = () => {
   const mm = String(today.getMonth() + 1).padStart(2, "0");
   const yyyy = today.getFullYear();
   today = yyyy + "-" + mm + "-" + dd;
+  const lastDayOfSeason = "2023-04-09";
 
-  const { data } = useGetRecentGameScoresQuery(today);
+  const { data } = useGetRecentGameScoresQuery(lastDayOfSeason);
 
   useEffect(() => {
     setGames(data?.response);

@@ -60,7 +60,7 @@ const UpcomingGames = () => {
       <div className="current-games-container">
         {nextTenScheduledGames?.length > 0
           ? displayScheduledGames
-          : "Eliminated from playoff contention"}
+          : "2024 season not yet released"}
       </div>
     </>
   );
